@@ -1,7 +1,11 @@
 "use strict";
 import { fetchFakerData } from './functions.js';
 
-// Función para renderizar las cards en el contenedor
+/**
+ * Renderiza hasta tres cards en el contenedor con id "skeleton-container" usando los datos proporcionados.
+ * @param {Array<Object>} items - Arreglo de objetos con las claves title, author, genre y content.
+ * @returns {void}
+ */
 const renderCards = (items) => {
     const container = document.getElementById("skeleton-container");
     if (!container) return;
@@ -29,6 +33,12 @@ const renderCards = (items) => {
     });
 };
 
+/**
+ * Función asíncrona que obtiene datos de la API de Faker y renderiza las cards.
+ * En caso de éxito, muestra los datos en consola y renderiza las cards.
+ * En caso de error, muestra el mensaje de error en consola.
+ * @returns {Promise<void>}
+ */
 const loadData = async () => {
     const url = 'https://fakerapi.it/api/v2/texts?_quantity=10&_characters=120';
     try {
@@ -44,6 +54,10 @@ const loadData = async () => {
     }
 }
 
+/**
+ * Muestra un toast interactivo si existe el elemento con id "toast-interactive".
+ * @returns {void}
+ */
 const showToast = () => {
     const toast = document.getElementById("toast-interactive");
     if (toast) {
@@ -52,6 +66,10 @@ const showToast = () => {
     }
 };
 
+/**
+ * Agrega un evento click al botón con id "demo" para abrir un video en una nueva pestaña.
+ * @returns {void}
+ */
 const showVideo = () => {
     const demo = document.getElementById("demo");
     if (demo) {
