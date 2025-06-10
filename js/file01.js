@@ -9,11 +9,15 @@ const showToast = () => {
     }
 };
 
+/**
+ * Agrega un evento click al botón con id "demo" para abrir un video en una nueva pestaña.
+ * @returns {void}
+ */
 const showVideo = () => {
     const demo = document.getElementById("demo");
     if (demo) {
         demo.addEventListener("click", () => {
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
+            window.open("https://www.youtube.com/watch?v=9ocAWu_yNb4", "_blank");
         });
     }
 };
@@ -67,5 +71,6 @@ const loadData = async () => {
     showToast();
     showVideo();
     loadData();
+
 })();
 
