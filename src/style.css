@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.table-dark-text th,
+.table-dark-text td {
+  color: #2d3748; /* text-gray-800 */
+}
+
 a {
   font-weight: 500;
   color: #646cff;
