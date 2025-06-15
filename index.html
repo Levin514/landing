@@ -14,8 +14,6 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./src/style.css">
     <!-- Gradient background style -->
     <style>
       .gradient {
@@ -332,15 +330,15 @@
         <h3 class="my-4 text-3xl leading-tight text-white">
           Déjanos tus datos y un comentario para saber que te interesa la idea y cómo podríamos mejorarla.
         </h3>
-        <form class="bg-white bg-opacity-60 backdrop-blur-md rounded-lg shadow-md p-6 flex flex-col gap-4 mx-auto"
+        <form id="form_voting" class="bg-white bg-opacity-60 backdrop-blur-md rounded-lg shadow-md p-6 flex flex-col gap-4 mx-auto"
           style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); max-width: 100%;">
-          <input type="text" placeholder="Nombre completo"
+          <input name=userInput type="text" placeholder="Nombre completo"
             class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 text-gray-800 bg-white bg-opacity-80"
             required>
-          <input type="email" placeholder="Correo electrónico"
+          <input name="email"  type="email" placeholder="Correo electrónico"
             class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 text-gray-800 bg-white bg-opacity-80"
             required>
-          <textarea placeholder="¿Qué te gustaría ver en ParkAPal? (opcional)"
+          <textarea name="message" placeholder="¿Qué te gustaría ver en ParkAPal? (opcional)"
             class="p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400 text-gray-800 bg-white bg-opacity-80"
             rows="4"></textarea>
           <button type="submit"
@@ -510,5 +508,8 @@
         return false;
       }
     </script>
+
+    <script type="module" src="./js/file01.js"></script>
+
   </body>
 </html>
