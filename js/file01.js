@@ -8,7 +8,6 @@ function enableForm() {
     event.preventDefault();
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
-    console.log(data);
     saveVote(data);
     form.reset();
   });
